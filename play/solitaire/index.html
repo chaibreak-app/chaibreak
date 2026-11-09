@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-ui="glass" data-route="path">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Play Solitaire online free | Chaibreak</title>
+<meta name="description" content="Klondike solitaire with draw-one or draw-three, undo, drag and drop, and auto-finish.">
+<meta name="theme-color" content="#0D0A24">
+<meta name="cb-root" content="../../">
+<meta property="og:site_name" content="Chaibreak">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Play Solitaire online free | Chaibreak">
+<meta property="og:description" content="Klondike solitaire with draw-one or draw-three, undo, drag and drop, and auto-finish.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml"><link rel="icon" href="../../assets/icons/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><link rel="preload" href="../../assets/fonts/baloo-2-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/app.css?v=e54443e4">
+</head>
+<body data-start="solitaire">
+<div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i><i class="a5"></i></div>
+
+<header class="site"><div class="in">
+  <a class="brand" id="brandLink" href="../../" data-home aria-label="Chaibreak home"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6D4BFF"/><stop offset=".55" stop-color="#C84BD6"/><stop offset="1" stop-color="#FF8A4C"/></linearGradient>
+  <linearGradient id="tea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2A65A"/><stop offset="1" stop-color="#A4561E"/></linearGradient>
+  <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".55"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".18"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".45"/></linearGradient>
+</defs>
+<rect x="12" y="12" width="104" height="104" rx="28" fill="url(#bg)"/>
+<rect x="12" y="12" width="104" height="52" rx="28" fill="#FFFFFF" opacity=".12"/>
+<path d="M38 46 L90 46 L83 104 L45 104 Z" fill="url(#gl)" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="3" stroke-linejoin="round"/>
+<path d="M40.6 60 L87.4 60 L83 102 L45 102 Z" fill="url(#tea)"/>
+<ellipse cx="64" cy="60" rx="23.4" ry="3.6" fill="#FFD9A8"/>
+<g stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2.2" stroke-linecap="round"><path d="M52 50 L54 99"/><path d="M64 50 L64 99"/><path d="M76 50 L74 99"/></g>
+<g fill="none" stroke="#FFFFFF" stroke-width="4.2" stroke-linecap="round"><path d="M55 38 C49 31 61 27 55 19"/><path d="M71 38 C65 31 77 27 71 19"/></g>
+</svg><span>Chaibreak</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../../" data-home>Games</a>
+    <button type="button" id="navDaily">Today</button>
+  </nav>
+  <div class="tools">
+    <button class="pillbtn" id="installBtn" type="button" hidden>Install</button>
+    <button class="icon" id="fullBtn" type="button" aria-label="Full screen" title="Full screen (F)" hidden>
+      <svg viewBox="0 0 24 24"><path d="M4 9V4h5"/><path d="M20 15v5h-5"/><path d="M4 4l6 6"/><path d="M20 20l-6-6"/></svg>
+    </button>
+    <button class="icon" id="themeBtn" type="button" aria-label="Switch theme" title="Theme (T)">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor" stroke="none"/></svg>
+    </button>
+    <button class="icon" id="muteBtn" type="button" aria-label="Sound on" aria-pressed="false" title="Sound (M)">
+      <svg class="on" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+      <svg class="off" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="m16 9 5 6m0-6-5 6"/></svg>
+    </button>
+  </div>
+</div></header>
+
+<main id="main">
+<section id="hub" class="wrap" aria-label="Games" hidden>
+  <div class="hero">
+    <div>
+      <h1>Take a chai break.</h1>
+      <p class="lead">Sixteen quick games for the gap between meetings. Free to play, no sign-up, and your scores stay on your device.</p>
+      <div class="ctas"><button class="btn" id="surprise" type="button">Surprise me</button><a class="ghost" id="heroExt" href="#" hidden>Add to Chrome</a><span class="streak" id="streakPill">Play today to start a streak</span></div>
+    </div>
+    <div class="cup" aria-hidden="true"><svg class="glassart" viewBox="24 14 80 98" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="hgl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset=".5" stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#fff" stop-opacity=".5"/></linearGradient><linearGradient id="htea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7B567"/><stop offset="1" stop-color="#A4561E"/></linearGradient></defs><ellipse cx="64" cy="106" rx="38" ry="5.5" fill="#fff" fill-opacity=".22"/><path d="M38 46 L90 46 L83 104 L45 104 Z" fill="url(#hgl)" stroke="#fff" stroke-opacity=".92" stroke-width="2.6" stroke-linejoin="round"/><path d="M40.6 60 L87.4 60 L83 102 L45 102 Z" fill="url(#htea)"/><ellipse cx="64" cy="60" rx="23.4" ry="3.6" fill="#FFD9A8"/><g stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"><path d="M52 50 L54 99"/><path d="M64 50 L64 99"/><path d="M76 50 L74 99"/></g></svg><div class="steam"><i></i><i></i><i></i></div></div>
+  </div>
+  <div id="dailySection">
+    <div class="sectionhead"><h2>Today</h2><p id="todayDate"></p></div>
+    <div class="daily" id="daily"></div>
+  </div>
+  <div class="sectionhead"><h2>All games</h2></div>
+  <div class="filters" id="filters" role="group" aria-label="Filter games"></div>
+  <div class="grid" id="grid"></div>
+  <ul class="plain" id="seoList"></ul>
+  <section class="promo" id="promo" aria-label="Chrome extension">
+    <img src="../../assets/icons/icon-192.png" alt="" width="60" height="60">
+    <div><h2>Play from your toolbar</h2><p>The free Chaibreak extension for Chrome puts five of these games one click away. It works offline and collects nothing. Works in Chrome, Edge and Brave on a computer.</p></div>
+    <span class="pbtns"><a class="btn" id="promoBtn" href="#">Add to Chrome</a><a class="ghost" id="promoPlay" href="#" hidden>Get the Android app</a></span>
+  </section>
+  <div class="howto">
+    <div><h3>No sign-up</h3><p>Open a game and play. There are no accounts and nothing to install.</p></div>
+    <div><h3>Install if you like</h3><p>Add Chaibreak to your home screen or desktop and it keeps working offline.</p></div>
+    <div><h3>Your scores stay with you</h3><p>Best scores, streaks and settings are saved in your own browser. We never collect them.</p></div>
+  </div>
+</section>
+
+<section id="play" class="play">
+  <div class="playgrid">
+    <div class="playcol" id="playcol" style="--ar:0.62">
+      <div class="hud">
+        <button class="hchip" id="backBtn" type="button" aria-label="Back to all games" title="All games (Esc)">
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Games
+        </button>
+        <div class="mid"><div class="score" id="scoreEl">0</div><div class="info" id="infoEl"></div></div>
+        <button class="hicon" id="restartBtn" type="button" aria-label="Restart" title="Restart">
+          <svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v5h-5"/></svg>
+        </button>
+      </div>
+      <div class="stage" id="stage">
+        <canvas id="c" aria-label="Game area"></canvas>
+        <div class="dom" id="dom"></div>
+        <div class="hint" id="hint" role="status"></div>
+        <div class="card" id="overCard" role="dialog" aria-label="Result">
+          <div class="panel">
+            <h2 id="overTitle">Run over</h2>
+            <div class="stats" id="oStats"></div>
+            <p class="note hi" id="newBest" hidden>New best</p>
+            <p class="note" id="oNote"></p>
+            <div class="stack" id="oStack">
+              <button class="cta" id="againBtn" type="button">Play again</button>
+              <span id="oExtra" class="stack" style="margin:0"></span>
+              <button class="ghost" id="hubBtn" type="button">All games</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="about" id="about"><h1>Solitaire</h1><p class="tag">Klondike, the office classic.</p><p class="desc">Klondike solitaire with draw-one or draw-three, undo, drag and drop, and auto-finish.</p><h2>How to play</h2><ol><li>Build the four foundations from ace to king, one suit each.</li><li>Stack tableau cards in descending order, alternating colours.</li><li>Tap a card then a destination, or drag it. Double-click sends a card to the foundations.</li></ol><h2>Controls</h2><dl><dt><kbd>Click or drag</kbd></dt><dd>Move cards</dd><dt><kbd>Double-click</kbd></dt><dd>To foundation</dd><dt><kbd>Z</kbd></dt><dd>Undo</dd></dl><div class="more"><a href="../../play/zest/" data-go="zest">Zest</a><a href="../../play/julienne/" data-go="julienne">Julienne</a><a href="../../play/slab/" data-go="slab">Slab</a><a href="../../play/pinpoint/" data-go="pinpoint">Pinpoint</a><a href="../../play/pocket/" data-go="pocket">Pocket</a><a href="../../play/binit/" data-go="binit">Bin It</a><a href="../../play/lastover/" data-go="lastover">Last Over</a><a href="../../play/biscuit/" data-go="biscuit">Biscuit Break</a><a href="../../play/noodle/" data-go="noodle">Noodle</a><a href="../../play/merge/" data-go="merge">Masala Merge</a><a href="../../play/sort/" data-go="sort">Pour Sort</a><a href="../../play/sudoku/" data-go="sudoku">Sudoku</a><a href="../../play/word/" data-go="word">Daily Word</a><a href="../../play/stall/" data-go="stall">Chai Stall</a><a href="../../play/carrom/" data-go="carrom">Carrom</a></div></aside>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="row"><a href="../../privacy.html">Privacy policy</a><span class="streak" id="footExt">Chrome extension: coming soon</span><button class="ghost" id="shareBtn" type="button">Share Chaibreak</button><button class="ghost" id="clearData" type="button">Clear saved data</button></div>
+  <p>Shortcuts: <kbd>M</kbd> sound, <kbd>T</kbd> theme, <kbd>F</kbd> full screen, <kbd>Esc</kbd> back to all games.</p>
+  <p>Chaibreak is free to play. It never asks for personal details, and best scores stay in this browser.</p>
+  <p>&copy; 2026 Chaibreak. All rights reserved. The games, code, artwork and sounds may not be copied, hosted elsewhere or sold without written permission. <a href="../../LICENSE.txt">Licence</a>.</p>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<noscript><p style="position:relative;z-index:2;max-width:640px;margin:20px auto;padding:0 16px">Chaibreak needs JavaScript to run its games. Please turn it on and reload this page.</p></noscript>
+<script src="../../assets/config.js"></script><script src="../../assets/app.js?v=9517b988" defer></script>
+</body>
+</html>
